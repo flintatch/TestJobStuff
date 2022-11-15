@@ -13,10 +13,7 @@ public class testFives {
     @DisplayName("Проверка запуска ресурса")
     void TestFirst() {
         step("Открыть ресурс ИНОтв", () -> {
-            open("https://russian.rt.com");
-        });
-        step("открыть ссылку ИНО ТВ", () -> {
-            $(".link_foreign-press").click();
+            open("https://www.wildberries.ru");
         });
     }
 }
