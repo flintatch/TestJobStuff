@@ -1,6 +1,5 @@
-package Tests;
+package tests;
 
-import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -8,12 +7,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class TestFives {
+public class testFives {
 
     @Test
     @DisplayName("Проверка запуска ресурса")
     void TestFirst() {
-        step("открыть ресурс ИНОтв", () -> {
+        step("Открыть ресурс ИНОтв", () -> {
             open("https://russian.rt.com");
         });
         step("открыть ссылку ИНО ТВ", () -> {

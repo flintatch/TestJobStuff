@@ -1,4 +1,4 @@
-package Assisst;
+package assisst;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
