@@ -12,8 +12,11 @@ public class testFives {
     @Test
     @DisplayName("Проверка запуска ресурса")
     void TestFirst() {
-        step("Открыть ресурс ИНОтв", () -> {
+        step("Открыть ресурс Вайлдберрис", () -> {
             open("https://www.wildberries.ru");
+        });
+        step("открыть боковое меню", () -> {
+            $(".nav-element__burger").click();
         });
     }
 }
