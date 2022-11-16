@@ -30,4 +30,15 @@ public class testFives {
             $("#searchInput").setValue("носки").pressEnter();
         });
     }
+
+    @Test
+    @DisplayName("Проверка валюты")
+    void TestThird() {
+        step("Открыть ресурс Вайлдберрис", () -> {
+            open("https://www.wildberries.ru");
+        });
+        step("проверка валюты", () -> {
+            $(".simple-menu__link--country").hover();
+        });
+    }
 }
