@@ -27,7 +27,7 @@ public class testFives {
             open("https://www.wildberries.ru");
         });
         step("вбить любое значение", ()-> {
-            $("#searchInput").click();
+            $("#searchInput").setValue("носки").pressEnter();
         });
     }
 }
