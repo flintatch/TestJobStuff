@@ -19,4 +19,15 @@ public class testFives {
             $(".nav-element__burger").click();
         });
     }
+
+    @Test
+    @DisplayName("Проверка поисковика")
+    void TestSecond() {
+        step("Открыть ресурс Вайлдберрис", () -> {
+            open("https://www.wildberries.ru");
+        });
+        step("вбить любое значение", ()-> {
+            $("#searchInput").click();
+        });
+    }
 }
