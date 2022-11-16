@@ -41,4 +41,15 @@ public class testFives {
             $(".simple-menu__link--country").hover();
         });
     }
+
+    @Test
+    @DisplayName("проверка корзины")
+    void TestFourth() {
+        step("Открыть ресурс Вайлдберрис", () -> {
+            open("https://www.wildberries.ru");
+        });
+        step("открыть корзину", () -> {
+            $(".j-wba-header-item").click();
+        });
+    }
 }
