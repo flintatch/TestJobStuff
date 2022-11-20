@@ -28,7 +28,7 @@ public class TestFives {
             open("https://www.wildberries.ru");
         });
         step("вбить любое значение", ()-> {
-            $("#searchInput").setValue("носки").pressEnter();
+            $("#searchInput").setValue("носки").pressEnter().shouldHave(text("носки"));
         });
     }
 
@@ -61,7 +61,7 @@ public class TestFives {
             open("https://www.wildberries.ru");
         });
         step("открыть отдельную ссылку", () -> {
-            $(".footer__container").scrollTo().shouldHave(text("YouTube"));;
+            $(".footer__container").scrollTo().shouldHave(text("YouTube"));
         });
     }
 }
