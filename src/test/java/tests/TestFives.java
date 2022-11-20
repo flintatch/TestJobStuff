@@ -1,15 +1,14 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class testFives {
+public class TestFives {
 
     @Test
     @DisplayName("Проверка запуска ресурса")
@@ -40,7 +39,7 @@ public class testFives {
             open("https://www.wildberries.ru");
         });
         step("проверка валюты", () -> {
-            $(".simple-menu__link--country").hover();
+            $(".simple-menu__link--country").hover().shouldHave(text("Белорусский рубль"));
         });
     }
 
@@ -56,13 +55,13 @@ public class testFives {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Проверка прокрутки")
     void TestFifth() {
         step("Открыть ресурс Вайлдберрис", () -> {
             open("https://www.wildberries.ru");
         });
         step("открыть отдельную ссылку", () -> {
-            $(".j-wba-footer-item").shouldHave(Condition.attribute("YouTube"));
+            $(".footer__container").scrollTo().shouldHave(text("YouTube"));;
         });
     }
 }
