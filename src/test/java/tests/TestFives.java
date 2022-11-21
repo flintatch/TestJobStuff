@@ -52,7 +52,8 @@ public class TestFives {
             open("https://www.wildberries.ru");
         });
         step("открыть корзину", () -> {
-            $(".j-wba-header-item").click();
+            $(".j-item-basket").click();
+            $(".section-header").shouldHave(text("В корзине пока пусто"));
         });
     }
 
