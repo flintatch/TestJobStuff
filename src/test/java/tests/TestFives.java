@@ -4,8 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class TestFives {
@@ -23,23 +22,26 @@ public class TestFives {
 
     @Test
     @DisplayName("Проверка поисковика")
-    void TestSecond() {
+    void testSecond() {
         step("Открыть ресурс Вайлдберрис", () -> {
             open("https://www.wildberries.ru");
         });
         step("вбить любое значение", ()-> {
-            $("#searchInput").setValue("носки").pressEnter().shouldHave(text("носки"));
+            $("#searchInput").setValue("носки").pressEnter();
+            sleep(5000);
+            $(".searching-results__title") .shouldHave(text("носки"));
         });
     }
 
     @Test
     @DisplayName("Проверка валюты")
-    void TestThird() {
+    void testThird() {
         step("Открыть ресурс Вайлдберрис", () -> {
             open("https://www.wildberries.ru");
         });
         step("проверка валюты", () -> {
-            $(".simple-menu__link--country").hover().shouldHave(text("Белорусский рубль"));
+            $(".simple-menu__link--country").hover();
+            $(".popup__form").shouldHave(text("Белорусский рубль"));
         });
     }
 
