@@ -18,7 +18,7 @@ public class TestFives {
         step("открыть боковое меню", () -> {
             $(".nav-element__burger").click();
         });
-        step("проверка", () -> {
+        step("проверка ресурса", () -> {
             $(".menu-burger__main").shouldHave(text("Женщинам"));
         });
     }
@@ -33,7 +33,7 @@ public class TestFives {
             $("#searchInput").setValue("носки").pressEnter();
             sleep(5000);
         });
-        step("проверка", () -> {
+        step("проверка поисковика", () -> {
             $(".searching-results__title").shouldHave(text("носки"));
         });
     }
@@ -47,7 +47,7 @@ public class TestFives {
         step("проверка валюты", () -> {
             $(".simple-menu__link--country").hover();
         });
-            step("проверка", () -> {
+            step("проверка валют", () -> {
             $(".popup__form").shouldHave(text("Белорусский рубль"));
         });
     }
@@ -61,7 +61,7 @@ public class TestFives {
         step("открыть корзину", () -> {
                     $(".j-item-basket").click();
         });
-        step("проверка", () -> {
+        step("проверка корзины", () -> {
             $(".section-header").shouldHave(text("В корзине пока пусто"));
         });
     }
