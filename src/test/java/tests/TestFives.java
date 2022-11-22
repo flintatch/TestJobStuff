@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class TestFives {
+public class TestFives extends TestBase {
 
     @Test
     @DisplayName("Проверка запуска ресурса")
