@@ -18,6 +18,9 @@ public class TestFives {
         step("открыть боковое меню", () -> {
             $(".nav-element__burger").click();
         });
+        step("проверка", () -> {
+            $(".menu-burger__main").shouldHave(text("Женщинам"));
+        });
     }
 
     @Test
@@ -29,7 +32,9 @@ public class TestFives {
         step("вбить любое значение", ()-> {
             $("#searchInput").setValue("носки").pressEnter();
             sleep(5000);
-            $(".searching-results__title") .shouldHave(text("носки"));
+        });
+        step("проверка", () -> {
+            $(".searching-results__title").shouldHave(text("носки"));
         });
     }
 
@@ -41,6 +46,8 @@ public class TestFives {
         });
         step("проверка валюты", () -> {
             $(".simple-menu__link--country").hover();
+        });
+            step("проверка", () -> {
             $(".popup__form").shouldHave(text("Белорусский рубль"));
         });
     }
@@ -52,7 +59,9 @@ public class TestFives {
             open("https://www.wildberries.ru");
         });
         step("открыть корзину", () -> {
-            $(".j-item-basket").click();
+                    $(".j-item-basket").click();
+        });
+        step("проверка", () -> {
             $(".section-header").shouldHave(text("В корзине пока пусто"));
         });
     }
