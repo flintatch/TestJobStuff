@@ -11,7 +11,7 @@ public class TestFives {
 
     @Test
     @DisplayName("Проверка запуска ресурса")
-    void TestFirst() {
+    void testFirst() {
         step("Открыть ресурс Вайлдберрис", () -> {
             open("https://www.wildberries.ru");
         });
@@ -54,7 +54,7 @@ public class TestFives {
 
     @Test
     @DisplayName("Проверка корзины")
-    void TestFourth() {
+    void testFourth() {
         step("Открыть ресурс Вайлдберрис", () -> {
             open("https://www.wildberries.ru");
         });
@@ -68,7 +68,7 @@ public class TestFives {
 
     @Test
     @DisplayName("Проверка прокрутки")
-    void TestFifth() {
+    void testFifth() {
         step("Открыть ресурс Вайлдберрис", () -> {
             open("https://www.wildberries.ru");
         });
