@@ -1,0 +1,11 @@
+
+
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-1001832303481", "text": "This is LEROY JENKINS", "disable_notification": true}' https://api.telegram.org/bot5851562764:AAFIXQxtRiUSjXcdnje7g_-eoS222cjjoCQ/sendMessage
+
+bot token - 5851562764:AAFIXQxtRiUSjXcdnje7g_-eoS222cjjoCQ
+bot username - flintatch22_bot
+chat ID - -1001832303481
+
+https://api.telegram.org/bot5851562764:AAFIXQxtRiUSjXcdnje7g_-eoS222cjjoCQ/getUpdates
+
+java -DconfigFile=notifications/telegram.json -jar notifications/allure-notifications-4.2.1.jar
